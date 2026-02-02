@@ -1,0 +1,1 @@
+# office-hase-inheritance
