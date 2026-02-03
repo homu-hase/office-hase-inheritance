@@ -88,8 +88,7 @@ h1,
 h2,
 h3 {
  margin: var(--sp-0) var(--sp-0) var(--sp-16);
-  font-weight: 600;
-}
+  margin: var(--sp-0) var(--sp-0) var(--space-2);
 
 h2 {
   font-size: 28px;
