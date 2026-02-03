@@ -79,14 +79,15 @@ body {
   margin: var(--sp-0);
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   color: var(--c-text-222);
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 17px;
   background: var(--c-bg-fff);
 }
 
 h1,
 h2,
 h3 {
-  margin: var(--sp-0) var(--sp-0) var(--space-2);
+ margin: var(--sp-0) var(--sp-0) var(--sp-16);
   font-weight: 600;
 }
 
@@ -106,8 +107,10 @@ h2::after {
 }
 
 p {
-  margin: var(--sp-0) var(--sp-0) var(--space-1);
+  margin: var(--sp-0) var(--sp-0) var(--sp-12);
 }
+
+
 
 a {
   color: inherit;
@@ -286,7 +289,7 @@ header img {
 .service-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  gap: var(--sp-32);
   margin-top: var(--sp-56);
 }
 
@@ -307,6 +310,7 @@ header img {
   line-height: 1.4;
   position: relative;
   text-align: center;
+  word-break: keep-all;
 }
 
 /* 見出し下の gold ライン */
@@ -610,5 +614,213 @@ footer small {
     padding: var(--sp-16) var(--sp-24);
     font-size: 16px;
     box-sizing: border-box;
+    border-radius: 999px; /* 女性向けの安心感 */
+    letter-spacing: 0.05em;
   }
+}
+
+/* ===== services cards ===== */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.service-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.service-item h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.service-item p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ===== flow cards ===== */
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.flow-item {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.flow-step {
+  display: inline-block;
+  font-size: 12px;
+  color: #bfa14a;
+  margin-bottom: 8px;
+}
+
+.fv-points {
+  background: var(--c-bg-soft);
+  padding: var(--sp-32) 0;
+}
+
+.points-list {
+  max-width: 720px;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+}
+
+.points-list li {
+  line-height: 1.9;
+  margin-bottom: var(--sp-16);
+  color: var(--c-text-444);
+}
+
+.worries ul {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.worries li {
+  margin-bottom: var(--sp-16);
+  color: var(--c-text-555);
+}
+
+.points-list li,
+.worries li {
+  font-size: 17px;
+}
+  
+
+/* =========================
+   やさしさ補強（追記）
+========================= */
+
+/* FV直下の安心ポイント */
+.fv-points {
+  background: var(--c-bg-fafafa);
+  padding: var(--sp-32) 0;
+}
+
+.points-list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+.points-list li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--c-text-444);
+  margin-bottom: var(--sp-16);
+  position: relative;
+  padding-left: var(--sp-20);
+}
+
+.points-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-size: 10px;
+  color: var(--gold-color);
+  opacity: 0.5;
+}
+
+/* お悩み（共感ゾーン） */
+.worries ul {
+  max-width: 720px;
+  margin: var(--sp-32) auto 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.worries li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--c-text-555);
+  margin-bottom: var(--sp-16);
+  position: relative;
+  padding-left: var(--sp-20);
+}
+
+.worries li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--gold-color);
+  opacity: 0.4;
+}
+
+/* ご相談の流れ（安心を強調しすぎない） */
+.flow-item p {
+  color: var(--c-text-444);
+  line-height: 1.9;
+}
+
+.service-item,
+.handling-item,
+.flow-item {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    var(--c-bg-fafafa) 100%
+  );
+}
+
+h2::after,
+.service-item h3::after {
+  border-radius: 1px;
+}
+
+.section-lead,
+.fv-note,
+.cta-lead {
+  line-height: 2;
+}
+
+/* やさしさ：可読性を1段階アップ */
+.section-lead,
+.points-list li,
+.worries li,
+.service-item p,
+.handling-item li {
+  font-size: 18px;
+}
+
+/* 上品な色気：カードの浮遊感 */
+.service-item,
+.handling-item,
+.flow-item,
+.profile-table {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+h2,
+.service-item h3,
+.handling-item h3 {
+  letter-spacing: 0.06em;
+}
+
+.footer-contact a {
+  color: var(--c-text-333);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  color: var(--gold-color);
+}
+
+.footer-contact {
+  line-height: 2;
 }
