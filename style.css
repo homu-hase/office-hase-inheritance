@@ -312,3 +312,6 @@ footer small {
     font-size: 26px;
   }
 }
+body {
+  background: red !important;
+}
