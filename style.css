@@ -276,6 +276,19 @@ header .inner {
   color: #fff;
   border-radius: 999px;
   font-weight: 600;
+  margin: 32px auto;
+}
+
+.contact h2{
+  margin-bottom: 32px;
+}
+
+
+.contact .note,
+.contact p:last-child{
+  margin-top: 24px;
+  font-size: 0.9em;
+  opacity: .7;
 }
 
 /* =================================================
