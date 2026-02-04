@@ -341,3 +341,82 @@ footer small {
   background: var(--gold-color, #bfa14a);
   opacity: .7;
 }
+
+/* ===============================
+ CTA セクション：色気＋余裕＋奥行き
+=============================== */
+
+.section.cta{
+  position: relative;
+  padding: 96px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(191,161,74,.08) 0%,
+    #ffffff 40%,
+    rgba(191,161,74,.05) 100%
+  );
+}
+
+/* うっすら光 */
+.section.cta::before{
+  content:"";
+  position:absolute;
+  top:-40px;
+  left:50%;
+  transform:translateX(-50%);
+  width:420px;
+  height:220px;
+  background: radial-gradient(circle,
+    rgba(191,161,74,.22),
+    transparent 60%);
+  filter: blur(8px);
+  opacity:.6;
+  pointer-events:none;
+}
+
+/* 見出し */
+.section.cta h2{
+  margin-bottom: 32px;
+  letter-spacing:.05em;
+}
+
+/* リード文 */
+.cta-lead{
+  line-height:1.9;
+  margin-bottom:36px;
+}
+
+/* 「何から始めたら…」を特別扱い */
+.cta-lead br + br{
+  display:block;
+  content:"";
+  margin:10px 0;
+}
+
+.cta-lead{
+  background: rgba(191,161,74,.06);
+  border:1px solid rgba(191,161,74,.18);
+  border-radius:16px;
+  padding:22px 26px;
+  display:inline-block;
+}
+
+/* ボタンを“浮かせる” */
+.section.cta .btn{
+  margin:40px auto 32px;
+  box-shadow:0 12px 24px rgba(0,0,0,.12);
+  transition:.2s ease;
+}
+
+.section.cta .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 32px rgba(0,0,0,.16);
+}
+
+/* 下の注意文は軽く */
+.cta-note{
+  margin-top:28px;
+  font-size:.9em;
+  opacity:.7;
+  line-height:1.7;
+}
