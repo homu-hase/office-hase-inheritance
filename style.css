@@ -313,3 +313,18 @@ footer small {
   }
 
 
+.service-card{
+  position: relative;
+}
+
+.service-card::before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--gold-color, #bfa14a);
+  opacity: .7;
+}
