@@ -291,6 +291,8 @@ header .inner {
   opacity: .7;
 }
 
+
+
 /* =================================================
    Footer
 ================================================= */
@@ -341,7 +343,7 @@ footer small {
   background: var(--gold-color, #bfa14a);
   opacity: .7;
 }
-
+}
 /* ===============================
  CTA セクション：色気＋余裕＋奥行き
 =============================== */
@@ -356,6 +358,18 @@ footer small {
     rgba(191,161,74,.05) 100%
   );
 }
+
+/* * CTAの中だけ、必ず縦並びにする（外のflexに勝つ） */ 
+.section.cta .inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+
+
 
 /* うっすら光 */
 .section.cta::before{
@@ -376,34 +390,25 @@ footer small {
 
 /* 見出し */
 .section.cta h2{
-  margin-bottom: 32px;
+  margin: 0px;
   letter-spacing:.05em;
 }
 
 /* リード文 */
-.cta-lead{
-  line-height:1.9;
-  margin-bottom:36px;
-}
-
-/* 「何から始めたら…」を特別扱い */
-.cta-lead br + br{
-  display:block;
-  content:"";
-  margin:10px 0;
-}
-
-.cta-lead{
+.section.cta .cta-lead{
+  margin: 0;
+  line-height: 1.9;
   background: rgba(191,161,74,.06);
-  border:1px solid rgba(191,161,74,.18);
-  border-radius:16px;
-  padding:22px 26px;
-  display:inline-block;
+  border: 1px solid rgba(191,161,74,.18);
+  border-radius: 16px;
+  padding: 22px 26px;
+  width: min(720px, 100%);
 }
+
 
 /* ボタンを“浮かせる” */
 .section.cta .btn{
-  margin:40px auto 32px;
+  margin: 6px 0 0;
   box-shadow:0 12px 24px rgba(0,0,0,.12);
   transition:.2s ease;
 }
@@ -414,8 +419,9 @@ footer small {
 }
 
 /* 下の注意文は軽く */
-.cta-note{
-  margin-top:28px;
+.section.cta .cta-note{
+  margin: 6px 0 0;
   font-size:.9em;
   opacity:.7;
-  line-height:1.7;}
+  line-height:1.7;
+}
