@@ -611,6 +611,19 @@ footer a {
   max-width: 44em;
 }
 
+/* サービス/流れ：スマホは必ず1列 */
+.service-list,
+.flow-list {
+  grid-template-columns: 1fr !important;
+}
+.service-item,
+.flow-item {
+  padding: 18px 16px;
+}
+
+.service-item h3 {
+  white-space: normal; /* 1行固定を解除 */
+}
 /* =========================
   Small Smartphone (<=480px)
   Android小さい画面対策
