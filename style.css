@@ -610,3 +610,67 @@ footer a {
 .cta-note {
   max-width: 44em;
 }
+
+/* =========================
+  Small Smartphone (<=480px)
+  Android小さい画面対策
+========================= */
+@media (max-width: 480px) {
+  /* 全体：さらに横余白を増やす */
+  .inner {
+    width: calc(100% - 40px); /* 左右20px */
+  }
+
+  /* FV：文字を少し小さく、2行に安定 */
+  .fv h1 {
+    font-size: 24px;
+    line-height: 1.55;
+    max-width: none; /* 変な改行を防ぐ */
+  }
+
+  /* FV説明文 */
+  .fv-note {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  /* サービスカード：必ず縦1列 */
+  .service-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* カード中身：詰まり防止 */
+  .service-item {
+    padding: 18px 16px;
+  }
+
+  .service-item h3 {
+    font-size: 17px;
+    white-space: normal; /* 省略しない */
+  }
+
+  .service-item p {
+    font-size: 15.8px;
+    line-height: 1.9;
+  }
+
+  /* CTA見出し：無理に2行にしない */
+  .section.cta h2 {
+    font-size: 20px;
+    padding: 0 4px;
+  }
+
+  /* CTA文章 */
+  .cta-lead,
+  .cta-note {
+    font-size: 15.8px;
+    line-height: 1.95;
+  }
+
+  /* ボタン：少しだけコンパクトに */
+  .section.cta .btn {
+    font-size: 17px;
+    padding: 16px 16px;
+  }
+}
