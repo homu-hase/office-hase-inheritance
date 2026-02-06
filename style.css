@@ -561,3 +561,154 @@ footer a {
     margin-bottom: 32px;
   }
 }
+
+/* =========================
+  Smartphone readability boost
+  年配の方向け：文字・余白・押しやすさ（<=768px）
+  ※PC/iPadは壊さない。末尾に追記するだけ。
+========================= */
+@media (max-width: 768px) {
+  /* 1) まず全体の“読み心地” */
+  body {
+    font-size: 17px; /* 16→17：年配の方に効く */
+    line-height: 1.95; /* 1.85→少しゆったり */
+    letter-spacing: 0.02em; /* 0.01→少し戻して読みやすく */
+  }
+
+  /* 2) 横の余白（最重要：疲れやすさが激減する） */
+  .inner {
+    width: min(980px, calc(100% - 32px)); /* 28px → 32px（左右16pxずつ） */
+  }
+
+  /* 3) セクション余白：詰めすぎない（スクロール疲れも抑える） */
+  .section {
+    padding: 76px 0; /* 72→少しだけゆとり */
+  }
+
+  /* 4) 見出しのサイズ（スマホで“ちゃんと見出し”に見える） */
+  .fv h1 {
+    font-size: 26px; /* clampより明確に読みやすく */
+    line-height: 1.5;
+  }
+
+  .section h2 {
+    font-size: 22px;
+    padding-bottom: 18px; /* 20→少しだけ詰める */
+    margin-bottom: 28px; /* 34→スマホは少し短く */
+  }
+
+  .section > .inner > *:first-child {
+    margin-bottom: 34px; /* 48→スマホは少し短くしてテンポUP */
+  }
+
+  /* 5) 箇条書き：行間と余白（読み疲れ対策） */
+  .worries ul {
+    padding-left: 1.4em; /* 少し見やすく */
+  }
+  .worries li {
+    margin: 12px 0; /* 10→ゆとり */
+  }
+
+  /* 6) カード（サービス/流れ）：タップしやすく、詰め感をなくす */
+  .service-item,
+  .flow-item {
+    padding: 20px 18px; /* 22→スマホは左右を少しだけ狭め、上下は確保 */
+    border-radius: 18px;
+  }
+
+  .service-item p,
+  .flow-item p {
+    font-size: 16.5px; /* 本文ちょい大きく */
+    line-height: 1.95;
+  }
+
+  /* 7) ボタン：親指で押しやすく、文字も大きく */
+  .btn {
+    width: 100%;
+    max-width: 360px; /* 大きすぎ防止 */
+    padding: 16px 18px; /* タップ領域UP */
+    font-size: 17px;
+  }
+
+  /* 8) CTAの文章：読みやすい幅・余白 */
+  .cta-lead {
+    width: 100%;
+    max-width: 42em;
+    padding: 18px 16px; /* 18/18よりさらに読みやすく */
+    line-height: 1.95;
+  }
+
+  /* 9) フッター：行間と文字サイズをほんの少しだけ上げる */
+  footer .inner {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .footer-address,
+  .footer-contact {
+    font-size: 15.5px;
+    line-height: 1.9;
+  }
+}
+
+/* =========================
+  Smartphone tuning : FV & CTA
+  目にやさしく・一瞬で伝わる
+========================= */
+@media (max-width: 768px) {
+  /* ===== FV ===== */
+
+  .fv {
+    padding: 72px 0 28px; /* 上を少し詰めて“最初に文字が来る” */
+  }
+
+  .fv h1 {
+    font-size: 27px; /* 少し大きめ：老眼でも一読できる */
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    margin-bottom: 22px;
+  }
+
+  .fv-note {
+    font-size: 16.5px;
+    line-height: 1.9;
+    max-width: 40em; /* 行が長くなりすぎない */
+    padding: 0 6px;
+  }
+
+  /* 箇条書き（FV points） */
+  .points-list {
+    margin-top: 28px;
+    gap: 18px; /* 行間をしっかり */
+  }
+
+  .points-list li {
+    padding: 14px 0;
+    font-size: 16.5px;
+    line-height: 1.9;
+  }
+
+  /* ===== CTA ===== */
+
+  .section.cta {
+    padding: 88px 0; /* 圧迫感を減らす */
+  }
+
+  .cta-lead {
+    font-size: 16.8px;
+    line-height: 2; /* CTAは“読む負担ゼロ”が正解 */
+    padding: 20px 18px;
+    margin-bottom: 28px;
+  }
+
+  .section.cta .btn {
+    font-size: 18px; /* 行動ボタンは一段大きく */
+    padding: 18px 18px;
+    max-width: 340px;
+  }
+
+  .cta-note {
+    font-size: 15.5px;
+    line-height: 1.9;
+    margin-top: 20px;
+  }
+}
