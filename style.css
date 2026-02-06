@@ -594,3 +594,19 @@ footer a {
     max-width: 34em;
   }
 }
+/* CTAの中身は常に縦積み（PC版で横並びに戻るのを防ぐ） */
+.section.cta .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section.cta .btn {
+  display: block;
+}
+
+/* CTAの文章ブロックを読みやすく（PCにも効く） */
+.cta-lead,
+.cta-note {
+  max-width: 44em;
+}
