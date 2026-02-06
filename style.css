@@ -443,6 +443,7 @@ footer a {
   text-underline-offset: 3px;
 }
 
+
 /* =========================
   iPad（タブレット）最適化
   769px〜1024px
@@ -486,6 +487,13 @@ footer a {
   }
 }
 
+/* PC/iPadは常に2カラム（横2×縦2） */
+.service-list,
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
 /* =========================
   Smartphone Final Tuning (<=768px)
   PC/iPadは触らない：スマホだけ（これを最下部に）
@@ -719,7 +727,7 @@ footer a {
   /* サービス/流れ：スマホは必ず1列（←これを“ここ”へ移す） */
   .service-list,
   .flow-list {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
     gap: 16px;
   }
   .service-item,
