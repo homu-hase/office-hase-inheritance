@@ -672,4 +672,6 @@ footer a {
   }
 }
 
- body { background: #fff7d6 !important; }  /* テスト：スマホだけ背景が薄黄色になる */
+body {
+  background: #fff7d6 !important;
+} /* テスト：スマホだけ背景が薄黄色になる */
