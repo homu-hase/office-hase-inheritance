@@ -552,9 +552,9 @@ footer a {
     text-align: center;
     margin: 0 auto;
     line-height: 1.45;
-
-    display: inline-block; /* ←2行制御が安定 */
-    max-width: 11.5em;
+    padding: 0 6px;
+    display: block; /* ←2行制御が安定 */
+    max-width: none;
   }
 
   /* CTA文章：だらだら感を減らす */
