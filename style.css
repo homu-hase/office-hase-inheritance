@@ -594,36 +594,7 @@ footer a {
     max-width: 34em;
   }
 }
-/* CTAの中身は常に縦積み（PC版で横並びに戻るのを防ぐ） */
-.section.cta .inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.section.cta .btn {
-  display: block;
-}
-
-/* CTAの文章ブロックを読みやすく（PCにも効く） */
-.cta-lead,
-.cta-note {
-  max-width: 44em;
-}
-
-/* サービス/流れ：スマホは必ず1列 */
-.service-list,
-.flow-list {
-  grid-template-columns: 1fr !important;
-}
-.service-item,
-.flow-item {
-  padding: 18px 16px;
-}
-
-.service-item h3 {
-  white-space: normal; /* 1行固定を解除 */
-}
 /* =========================
   Small Smartphone (<=480px)
   Android小さい画面対策
@@ -685,5 +656,121 @@ footer a {
   .section.cta .btn {
     font-size: 17px;
     padding: 16px 16px;
+  }
+}
+/* =========================
+  iPhone / Smartphone only
+  PC/iPadは触らない（タッチ端末だけ）
+========================= */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  /* 横スクロール封じ */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 横にパンパン対策（内側の余白を安定化） */
+  .inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* セクション余白：詰まり感を解消 */
+  .section {
+    padding: 72px 0;
+  }
+
+  /* FV */
+  .fv {
+    padding: 64px 0 18px;
+  }
+  .fv h1 {
+    font-size: 26px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    max-width: 16.5em;
+    margin: 0 auto 18px;
+    text-align: center;
+    word-break: keep-all;
+    line-break: strict;
+  }
+  .fv-note {
+    max-width: 34em;
+    margin: 0 auto;
+    padding: 0 8px;
+    font-size: 16.8px;
+    line-height: 2;
+  }
+
+  /* points */
+  .fv-points {
+    padding: 0 0 56px;
+  }
+  .points-list {
+    max-width: 34em;
+    gap: 14px;
+  }
+  .points-list li {
+    font-size: 16.6px;
+    line-height: 1.95;
+  }
+
+  /* サービス/流れ：スマホは必ず1列（←これを“ここ”へ移す） */
+  .service-list,
+  .flow-list {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .service-item,
+  .flow-item {
+    padding: 18px 16px;
+  }
+  .service-item h3 {
+    white-space: normal; /* 1行固定解除（スマホだけ） */
+    text-align: center;
+  }
+
+  /* CTA：縦積み（←これも“ここ”へ移す） */
+  .section.cta .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-lead {
+    text-align: left;
+    max-width: 32em;
+    margin: 0 auto 18px;
+    padding: 18px 16px;
+    font-size: 16.7px;
+    line-height: 2.05;
+  }
+  .cta-note {
+    text-align: left;
+    max-width: 32em;
+    margin: 14px auto 0;
+    font-size: 15.6px;
+    line-height: 1.95;
+    opacity: 0.9;
+  }
+  .section.cta .btn {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    font-size: 18px;
+    padding: 18px 18px;
+  }
+}
+
+/* 小さいスマホだけ微調整（任意） */
+@media (max-width: 480px) and (hover: none) and (pointer: coarse) {
+  .fv h1 {
+    font-size: 24px;
+    line-height: 1.55;
+    max-width: none;
+  }
+  .fv-note {
+    font-size: 16px;
+    line-height: 1.9;
   }
 }
