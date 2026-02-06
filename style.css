@@ -671,3 +671,5 @@ footer a {
     max-width: 34em;
   }
 }
+
+ body { background: #fff7d6 !important; }  /* テスト：スマホだけ背景が薄黄色になる */
