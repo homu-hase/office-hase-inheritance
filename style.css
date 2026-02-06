@@ -650,65 +650,83 @@ footer a {
   }
 }
 
-/* =========================
+=========================
   Smartphone tuning : FV & CTA
-  目にやさしく・一瞬で伝わる
+  PC/iPadは触らない / スマホだけ読みやすく
 ========================= */
 @media (max-width: 768px) {
   /* ===== FV ===== */
-
   .fv {
-    padding: 72px 0 28px; /* 上を少し詰めて“最初に文字が来る” */
+    padding: 68px 0 22px;
   }
 
+  /* 見出しを“2行に見せる”：自然改行をコントロール */
   .fv h1 {
-    font-size: 27px; /* 少し大きめ：老眼でも一読できる */
-    line-height: 1.55;
+    max-width: 14.5em; /* ←ここが肝。2行になりやすい幅 */
+    margin: 0 auto 18px;
+    font-size: 27px;
+    line-height: 1.65;
     letter-spacing: 0.04em;
-    margin-bottom: 22px;
   }
 
   .fv-note {
-    font-size: 16.5px;
-    line-height: 1.9;
-    max-width: 40em; /* 行が長くなりすぎない */
+    max-width: 36em;
+    margin: 0 auto;
     padding: 0 6px;
+    font-size: 16.8px;
+    line-height: 2;
+    color: var(--muted);
   }
 
-  /* 箇条書き（FV points） */
+  /* FV points（短く・読みやすく・間を作る） */
+  .fv-points {
+    padding: 0 0 60px;
+  }
+
   .points-list {
-    margin-top: 28px;
-    gap: 18px; /* 行間をしっかり */
+    margin-top: 24px;
+    gap: 16px;
   }
 
   .points-list li {
-    padding: 14px 0;
-    font-size: 16.5px;
-    line-height: 1.9;
+    padding: 12px 0;
+    font-size: 16.6px;
+    line-height: 1.95;
   }
 
   /* ===== CTA ===== */
-
   .section.cta {
-    padding: 88px 0; /* 圧迫感を減らす */
+    padding: 86px 0;
   }
 
+  /* 「案内」っぽく：売り感を薄める */
   .cta-lead {
+    width: 100%;
+    max-width: 38em;
+    margin: 0 auto 22px;
+    padding: 20px 16px;
     font-size: 16.8px;
-    line-height: 2; /* CTAは“読む負担ゼロ”が正解 */
-    padding: 20px 18px;
-    margin-bottom: 28px;
+    line-height: 2.05;
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  /* 「」の行だけ、少し強く見せる（HTML変更なしでできる範囲の強弱） */
+  .cta-lead {
+    letter-spacing: 0.02em;
   }
 
   .section.cta .btn {
-    font-size: 18px; /* 行動ボタンは一段大きく */
-    padding: 18px 18px;
+    width: 100%;
     max-width: 340px;
+    font-size: 18px;
+    padding: 18px 18px;
   }
 
   .cta-note {
-    font-size: 15.5px;
-    line-height: 1.9;
-    margin-top: 20px;
+    max-width: 40em;
+    margin: 18px auto 0;
+    font-size: 15.6px;
+    line-height: 1.95;
+    opacity: 0.88;
   }
 }
