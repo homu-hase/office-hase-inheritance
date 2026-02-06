@@ -513,12 +513,14 @@ footer a {
   .fv h1 {
     text-align: center;
     margin: 0 auto 18px;
-    font-size: 27px;
-    line-height: 1.7;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.04em;
 
-    display: inline-block; /* ←幅制御が安定 */
-    max-width: 12.2em;
+    display: block; /* ←幅制御が安定 */
+    max-width: 16.5em;
+    word-break: keep-all; /* なるべく不自然な分割を避ける */
+    line-break: strict; /* 日本語の改行ルールを厳密に */
   }
 
   .fv-note {
@@ -590,10 +592,5 @@ footer a {
   .service-item p,
   .flow-item p {
     max-width: 34em;
-  }
-
-  /* ★テスト（確認できたら削除） */
-  body {
-    background: #fff7d6 !important;
   }
 }
