@@ -509,14 +509,22 @@ footer a {
     display: none;
   }
 
+  header {
+    padding: 14px 0;
+  }
+  .logo img {
+    width: 180px; /* 220 → 180 */
+    height: auto;
+  }
   /* 全体の“読みやすさ”の基本 */
   body {
     line-height: 1.8;
     letter-spacing: 0.02em;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
     font-size: 15px;
     -webkit-text-size-adjust: 100%;
+    line-break: strict;
   }
 
   .inner {
@@ -526,7 +534,9 @@ footer a {
   p {
     margin: 10px 0;
   }
-
+  .section > .inner > *:first-child {
+    margin-bottom: 26px; /* 48px → 26px */
+  }
   .section {
     padding: 64px 0;
   }
@@ -548,9 +558,9 @@ footer a {
   }
 
   .fv h1 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.55;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     margin-bottom: 12px;
   }
 
@@ -562,6 +572,14 @@ footer a {
   /* points */
   .fv-points {
     padding: 0 0 48px;
+  }
+
+  /* ついで：箇条書きが読みやすくなる */
+  .worries ul {
+    padding-left: 1.1em;
+  }
+  .worries li {
+    margin: 8px 0;
   }
 
   .points-list {
