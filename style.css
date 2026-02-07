@@ -42,6 +42,8 @@ body {
   background: var(--bg);
   line-height: 1.85;
   letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 img {
@@ -416,6 +418,14 @@ header .inner {
   line-height: 1.75;
 }
 
+/* PC/スマホで文章を切り替える */
+.only-sp {
+  display: none;
+}
+.only-pc {
+  display: inline;
+}
+
 /* =========================
   Footer
 ========================= */
@@ -487,5 +497,111 @@ footer a {
   .cta-lead {
     padding: 20px 22px;
     margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 切り替え */
+  .only-sp {
+    display: inline;
+  }
+  .only-pc {
+    display: none;
+  }
+
+  /* 全体の“読みやすさ”の基本 */
+  body {
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .inner {
+    width: min(980px, calc(100% - 28px));
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  /* FV */
+  .fv {
+    padding: 54px 0 18px;
+  }
+
+  .fv h1 {
+    font-size: 22px;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+
+  .fv-note {
+    line-height: 1.75;
+    margin: 0 auto;
+  }
+
+  /* points */
+  .fv-points {
+    padding: 0 0 48px;
+  }
+
+  .points-list {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .points-list li {
+    padding: 10px 0;
+  }
+
+  /* cards：services/flow をスマホは1カラムに統一 */
+  .service-list,
+  .flow-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  /* services：見出しの「…」を解除 */
+  .service-item h3 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+
+  /* CTA */
+  .section.cta {
+    padding: 72px 0;
+  }
+
+  .cta-lead {
+    text-align: left;
+    padding: 18px;
+    margin: 0 auto 16px;
+    line-height: 1.75;
+  }
+
+  .section.cta .btn {
+    width: 100%;
+    max-width: 360px;
+    margin: 16px auto 12px;
+  }
+
+  .cta-note {
+    font-size: 0.9em;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+
+  /* footer */
+  footer {
+    padding: 48px 0 38px;
+  }
+
+  .footer-address,
+  .footer-contact {
+    line-height: 1.8;
   }
 }
