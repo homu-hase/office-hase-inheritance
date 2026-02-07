@@ -511,20 +511,37 @@ footer a {
 
   /* 全体の“読みやすさ”の基本 */
   body {
-    line-height: 1.75;
+    line-height: 1.8;
     letter-spacing: 0.02em;
     overflow-wrap: anywhere;
     word-break: normal;
+    font-size: 15px;
+    -webkit-text-size-adjust: 100%;
   }
 
   .inner {
     width: min(980px, calc(100% - 28px));
   }
 
+  p {
+    margin: 10px 0;
+  }
+
   .section {
     padding: 64px 0;
   }
+  .section h2 {
+    font-size: 22px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    letter-spacing: 0.03em;
+  }
 
+  .section h2::after {
+    width: 44px;
+    height: 3px;
+  }
   /* FV */
   .fv {
     padding: 54px 0 18px;
@@ -570,8 +587,20 @@ footer a {
     overflow: visible;
     text-overflow: initial;
   }
+  .service-item,
+  .flow-item {
+    padding: 18px;
+    border-radius: 16px; /* 角を少し控えめに */
+  }
 
+  .flow-step {
+    font-size: 0.85em;
+    padding: 5px 9px;
+  }
   /* CTA */
+  .btn {
+    min-height: 48px; /* 指で押しやすい */
+  }
   .section.cta {
     padding: 72px 0;
   }
