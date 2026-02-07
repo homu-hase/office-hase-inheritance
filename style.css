@@ -391,8 +391,6 @@ header .inner {
 }
 
 .cta-lead {
-  display: inline-block;
-  text-align: center;
   max-width: 44em;
   margin: 0 auto 38px;
   padding: 22px 26px;
@@ -400,6 +398,10 @@ header .inner {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(191, 161, 74, 0.18);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+
+  /* ここが重要：横並び化を防ぐ */
+  display: block;
+  text-align: center;
 }
 
 .section.cta .btn {
