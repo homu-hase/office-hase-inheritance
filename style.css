@@ -156,7 +156,6 @@ header .inner {
   margin-bottom: 26px;
 }
 
-
 .fv-note {
   text-align: center;
   color: var(--muted);
@@ -363,6 +362,13 @@ header .inner {
     #ffffff 42%,
     rgba(191, 161, 74, 0.06) 100%
   );
+}
+
+/* CTAの中の要素を縦並びにする（このブロックだけ） */
+.section.cta .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 光のニュアンス */
