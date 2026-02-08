@@ -485,7 +485,7 @@ footer a {
 
   /* CTA：光と余白を少し控えめに */
   .section.cta {
-    padding: 96px 0;
+    padding: 60px 0;
   }
 
   .section.cta::before {
@@ -528,7 +528,7 @@ footer a {
   }
 
   .inner {
-    width: min(980px, calc(100% - 28px));
+    width: min(980px, calc(100% - 36x));
   }
 
   p {
@@ -541,15 +541,15 @@ footer a {
     padding: 64px 0;
   }
   .section h2 {
-    font-size: 22px;
-    line-height: 1.35;
-    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 16px;
     padding-bottom: 14px;
     letter-spacing: 0.03em;
   }
 
   .section h2::after {
-    width: 44px;
+    width: 40px;
     height: 3px;
   }
   /* FV */
@@ -607,8 +607,9 @@ footer a {
   }
   .service-item,
   .flow-item {
-    padding: 18px;
+    padding: 20px;
     border-radius: 16px; /* 角を少し控えめに */
+    line-height: 1.9;
   }
 
   .flow-step {
