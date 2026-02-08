@@ -568,19 +568,27 @@ footer a {
   }
 
   .fv h1 {
-    font-size: 20px;
-    line-height: 1.55;
-    letter-spacing: 0.01em;
-    margin-bottom: 12px;
+    text-align: center;
+
+    font-size: 19px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+
+    /* ここが2行制御（プロ技） */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+
+    margin: 0 auto 10px;
+    max-width: 18em; /* ←これが効く：中央で2行に収まりやすくなる */
   }
 
   .fv-note {
-    line-height: 1.75;
     margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
   }
 
   /* points */
