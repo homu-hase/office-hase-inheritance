@@ -520,10 +520,10 @@ footer a {
   }
 
   header {
-    padding: 14px 0;
+    padding: 10px 0;
   }
   .logo img {
-    width: 180px; /* 220 → 180 */
+    width: 160px; /* 220 → 180 →160 */
     height: auto;
   }
   /* 全体の“読みやすさ”の基本 */
@@ -564,7 +564,7 @@ footer a {
   }
   /* FV */
   .fv {
-    padding: 54px 0 18px;
+    padding: 42px 0 14px;
   }
 
   .fv h1 {
