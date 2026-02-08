@@ -489,11 +489,12 @@ footer a {
   /* CTA：光と余白を少し控えめに */
   .section.cta {
     padding: 60px 0;
+    overflow: hidden;
   }
 
   .section.cta::before {
-    width: 440px;
-    height: 220px;
+    width: 360px;
+    height: 180px;
     opacity: 0.48;
   }
 
@@ -508,8 +509,14 @@ footer a {
   .only-sp {
     display: inline;
   }
+
   .only-pc {
     display: none;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
   header {
