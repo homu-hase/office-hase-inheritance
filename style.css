@@ -461,6 +461,39 @@ footer a {
 }
 
 /* =========================
+  Floating LINE (SP only)
+========================= */
+.floating-line {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.floating-line a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: #06c755;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* PCでは非表示 */
+@media (min-width: 769px) {
+  .floating-line {
+    display: none;
+  }
+}
+
+/* フッターが隠れないように */
+body {
+  padding-bottom: 60px;
+}
+/* =========================
   iPad（タブレット）最適化
   769px〜1024px
 ========================= */
